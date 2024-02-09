@@ -8,7 +8,10 @@ import logo from "../assets/images/logo.svg";
 const ErrorEl = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    if (window.location.pathname === "/app/transactions/spectranet") {
+    if (
+      window.location.pathname === "/app/transactions/spectranet" ||
+      window.location.pathname === "/spectranet"
+    ) {
       navigate("/payment/telecomms?biller=spectranet");
     } else {
       return;
