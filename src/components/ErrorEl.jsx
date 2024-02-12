@@ -12,7 +12,7 @@ const ErrorEl = () => {
       window.location.pathname === "/app/transactions/spectranet" ||
       window.location.pathname === "/spectranet"
     ) {
-      navigate("/payment/telecomms?biller=spectranet");
+      navigate("/payment/internet_services/spectranet");
     } else {
       return;
     }

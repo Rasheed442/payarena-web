@@ -196,13 +196,12 @@ const SideSelect = ({ selectedNetwork, setSelectedNetwork }) => {
       jkk.toLowerCase().replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "")
   );
 
-  const [params] = useSearchParams();
-  const biller = params.get("biller");
+  const { billertype } = useParams();
+
+  const biller = billertype;
   const newData = billerData?.find(
     (item) => item?.Url?.toLocaleLowerCase() === biller?.toLocaleLowerCase()
   );
-  console.log(newData, "ksls");
-
   useEffect(() => {
     // setBillerHandler(newData2?.Merchants);
     console.log("ksls", newData2?.Name);

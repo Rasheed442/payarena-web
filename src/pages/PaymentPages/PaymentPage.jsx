@@ -185,7 +185,7 @@ const PaymentPage = () => {
                       {selectedPayment}{" "}
                     </h3>
                     <p className="text-[#464255]">
-                      To pay for {selectedPayment.toLowerCase()}, provide the
+                      To pay for {selectedPayment?.toLowerCase()}, provide the
                       details below
                     </p>
 

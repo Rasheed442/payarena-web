@@ -93,7 +93,7 @@ const PaymentNav = () => {
 
     dispatch(catalogActions.setEditedData(editedCatalogArr));
     const currCatalog = editedCatalogArr.filter((data) => {
-      return data.path === location.pathname;
+      return data.path === `/payment/${paymenttype}`;
     });
     dispatch(catalogActions.setBiller(currCatalog[0]?.Merchants));
   }, []);

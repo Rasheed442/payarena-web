@@ -16,7 +16,13 @@ export const getCatalog = createAsyncThunk(
       let data = await response.json();
       console.log(data);
       if (response.status === 200) {
-        sessionStorage.setItem("catalogs", JSON.stringify(data));
+        const arr = data;
+        const itemToFind = data[12];
+        const foundIdx = arr.findIndex((el) => el == itemToFind);
+        console.log(foundIdx);
+        arr.splice(foundIdx, 6);
+        arr.unshift(itemToFind);
+        sessionStorage.setItem("catalogs", JSON.stringify(arr));
       } else {
         toast.error("Error", {
           description: data?.Error || "Couldn't get catalog, please try again.",
